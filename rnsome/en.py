@@ -14,6 +14,7 @@ import time
 import requests
 from requests import get
 import datetime
+import platform
 os.system("clear")
 files=[]
 
