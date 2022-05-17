@@ -1,4 +1,13 @@
 #!usr/bin/env python3
+
+######################################################
+# Copy Right to ~> Security On PePs & Team           #
+# Follow Me on Github ~> https://github.com/ajdev05/ #
+# Discord ~> https://discord.gg/KBSQyjWVzG           #
+# *Only for testing and educational Purposes*        #
+######################################################
+
+
 import os
 from cryptography.fernet import Fernet
 import time
