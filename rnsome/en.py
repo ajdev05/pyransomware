@@ -65,7 +65,7 @@ print(f"""
              
              """)
 
-wr=("lol hi")
+wr=("") ### Write Your text here or set of instrustion that the target has to follow
 with open("decrypt.txt", "w+") as f:
     f.write(wr)
 
